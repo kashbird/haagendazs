@@ -1,4 +1,5 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
 
 /* font-family: source-han-serif-korean,serif;
 font-weight: 700;
@@ -20,7 +21,8 @@ body {
 .main {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(45deg, #A87865, #392019)
+  background: linear-gradient(45deg, #A87865, #392019);
+  position: relative;
 }
 
 nav {
@@ -28,7 +30,9 @@ nav {
   align-items: center;
   margin-left: 100px;
   margin-right: 100px;
-  padding-top: 47px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 99;
 }
 
 .logo {
@@ -69,6 +73,7 @@ nav {
   position: absolute;
   right: 0;
   top: 6px;
+  display: none;
 }
 
 nav ul {
@@ -76,13 +81,14 @@ nav ul {
   margin-left : auto;
   list-style: none;
   padding: 0;
-  margin-right: 130px;
+  margin-right: 170px;
 }
 
 nav ul li {
   float: left;
   margin-left: 70px;
   font-weight: bold;
+  font-size: 16px;
 }
 nav ul li:first-child{
   margin: 0;
@@ -96,7 +102,7 @@ nav ul li a {
 .button {
   z-index: 99;
   position: fixed;
-  top: 72px;
+  top: 56px;
   right: 100px;
   width: 35px;
   cursor: pointer;
@@ -132,4 +138,201 @@ nav ul li a {
 }
 .button span:nth-child(3) {
   top: 22px;
+}
+
+.pattern {
+  width: 100vw;
+  height: 160px;
+  background-image: url(./images/main_pt.png);
+  background-repeat: no-repeat;
+  mix-blend-mode: luminosity;
+  opacity: 70%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.main_bg {
+  width: 1300px;
+  height: 800vh;
+  background-image: url(./images/main_bg_1.png);
+  background-repeat: no-repeat;
+  background-size: 1240px 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sub_bg {
+  width: 408px;
+  height: 287px;
+  background-image: url(./images/main_sub_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.copy {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%) rotate(90deg);
+  left: -4px;
+  font-size: 18px;
+  font-family: source-han-serif-korean,serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 50%;
+  text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+}
+
+.number {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  font-family: 'Water Brush', cursive;
+  font-size: 100px;
+  text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+}
+
+.product {
+  position: absolute;
+  top: 20%;
+  left: 47%;
+  transform: translateX(-50%);
+  background-image: url(./images/product_1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 396px;
+  height: 600px;
+  z-index: 99;
+}
+
+.title_1 {
+  position: absolute;
+  top: 48%;
+  left: 20%;
+  transform: translateY(-50%);
+  font-family: 'Water Brush', cursive;
+  font-size: 200px;
+  text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+}
+
+.title_2 {
+  position: absolute;
+  top: 48%;
+  left: 51%;
+  transform: translateY(-50%);
+  font-family: 'Water Brush', cursive;
+  font-size: 200px;
+  text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+}
+
+article button {
+  position: absolute;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-family: source-han-serif-korean,serif;
+  font-weight: 700;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0 1px 5px rgb(0, 0, 0, .3);
+}
+article button:hover {
+  border: none;
+  background-color: #392019;
+  transition: 0.5s;
+}
+
+.more {
+  width: 116px;
+  top: 72%;
+  left: 23%;
+}
+
+.find {
+  width: 160px;
+  top: 72%;
+  left: 30%;
+}
+
+article .title_txt {
+  position: absolute;
+  top: 71%;
+  left: 50%;
+}
+
+.title_txt p {
+  font-family: source-han-serif-korean,serif;
+  text-shadow: 0 1px 5px rgb(0, 0, 0, .3);
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.txt {
+  font-size: 16px;
+  margin: 0;
+}
+
+.util {
+  position: absolute;
+  z-index: 99;
+  bottom: 86px;
+  right: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border: none;
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 7px;
+  border: none;
+  opacity: 50%;
+  padding: 0;
+}
+.circle:nth-child(5) {
+  margin-right: 24px;
+}
+.show {
+  opacity: 100%;
+}
+
+.arrow_btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.left {
+  background-image: url(./images/left.png);
+  opacity: 50%;
+}
+
+.right {
+  background-image: url(./images/right.png);
 }
