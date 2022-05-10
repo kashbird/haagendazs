@@ -81,17 +81,30 @@ nav ul {
   margin-left : auto;
   list-style: none;
   padding: 0;
-  margin-right: 170px;
+  margin-right: 140px;
 }
 
 nav ul li {
   float: left;
-  margin-left: 70px;
+  margin-left: 50px;
   font-weight: bold;
   font-size: 16px;
 }
 nav ul li:first-child{
   margin: 0;
+}
+
+.border_line::after {
+  content: '';
+  display: block;
+  width: 0;
+  margin-top: 4px;
+  height: 3px;
+  background: #fff;
+  transition: width .3s;
+}
+.border_line:hover::after {
+  width: 100%;
 }
 
 nav ul li a {
@@ -102,7 +115,7 @@ nav ul li a {
 .button {
   z-index: 99;
   position: fixed;
-  top: 56px;
+  top: 53px;
   right: 100px;
   width: 35px;
   cursor: pointer;
@@ -145,11 +158,22 @@ nav ul li a {
   height: 160px;
   background-image: url(./images/main_pt.png);
   background-repeat: no-repeat;
-  mix-blend-mode: luminosity;
-  opacity: 70%;
+  opacity: 0%;
   position: absolute;
   top: 0;
   z-index: 1;
+  animation: 1.5s ptn-anim ease-out forwards;
+}
+@keyframes ptn-anim {
+  0% {
+    opacity: 0;
+    transform: translate(0%, -70%);
+    mix-blend-mode: luminosity;
+  }
+  100% {
+    opacity: 70%;
+    mix-blend-mode: luminosity;
+  }
 }
 
 .main_bg {
@@ -161,7 +185,14 @@ nav ul li a {
   position: absolute;
   top: 0;
   left: 0;
+  animation: 2s main_bg_anim ease-out;
 }
+@keyframes main_bg_anim {
+  0% {
+    transform: translate(-50%);
+  }
+}
+
 
 .sub_bg {
   width: 408px;
@@ -195,6 +226,7 @@ nav ul li a {
   font-family: 'Water Brush', cursive;
   font-size: 100px;
   text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+  animation: 1.5s product-anim ease-out;
 }
 
 .product {
@@ -208,30 +240,99 @@ nav ul li a {
   width: 396px;
   height: 600px;
   z-index: 99;
+  animation: 1.5s product-anim ease-out;
 }
+@keyframes product-anim {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+
 
 .title_1 {
   position: absolute;
+  opacity: 0;
   top: 48%;
   left: 20%;
   transform: translateY(-50%);
   font-family: 'Water Brush', cursive;
   font-size: 200px;
   text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+  animation: 1.5s anim-left ease-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes anim-left {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, -50%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .title_2 {
   position: absolute;
+  opacity: 0;
   top: 48%;
   left: 51%;
   transform: translateY(-50%);
   font-family: 'Water Brush', cursive;
   font-size: 200px;
   text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+  animation: 1.5s anim-right ease-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes anim-right {
+  0% {
+    opacity: 0;
+    transform: translate(70%, -50%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn_anim {
+  animation: 1.3s btn-anim ease-out forwards;
+  animation-delay: 1.5s;
+  position: absolute;
+  opacity: 0;
+  top: 72%;
+  left: 23%;
+}
+@keyframes btn-anim {
+  0%{
+    opacity: 0;
+    transform: translate(-60%, 0%);
+  }
+  30% {
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 article button {
-  position: absolute;
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
@@ -241,23 +342,22 @@ article button {
   height: 50px;
   border-radius: 25px;
   box-shadow: 0 1px 5px rgb(0, 0, 0, .3);
+  cursor: pointer;
 }
 article button:hover {
   border: none;
   background-color: #392019;
-  transition: 0.5s;
+  transition: 0.8s;
 }
+
 
 .more {
   width: 116px;
-  top: 72%;
-  left: 23%;
+  margin-right: 16px;
 }
 
 .find {
   width: 160px;
-  top: 72%;
-  left: 30%;
 }
 
 article .title_txt {
@@ -268,8 +368,27 @@ article .title_txt {
 
 .title_txt p {
   font-family: source-han-serif-korean,serif;
+  opacity: 0;
   text-shadow: 0 1px 5px rgb(0, 0, 0, .3);
+  animation: 1.5s txt-anim ease-out forwards;
+  animation-delay: 1s;
 }
+@keyframes txt-anim {
+  0%{
+    opacity: 0;
+    transform: translate(60%, 0);
+  }
+  30% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 
 .name {
   font-size: 22px;
@@ -301,6 +420,10 @@ article .title_txt {
   border: none;
   opacity: 50%;
   padding: 0;
+  cursor: pointer;
+}
+.circle:not(.show):hover {
+  opacity: 80%;
 }
 .circle:nth-child(5) {
   margin-right: 24px;
@@ -326,13 +449,18 @@ article .title_txt {
   width: 20px;
   height: 20px;
   padding: 0;
+  cursor: pointer;
+}
+.arrow:hover {
+  opacity: 100%;
 }
 
 .left {
   background-image: url(./images/left.png);
-  opacity: 50%;
+  opacity: 70%;
 }
 
 .right {
   background-image: url(./images/right.png);
+  opacity: 70%;
 }
