@@ -55,7 +55,7 @@ nav {
   background-color: transparent;
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-family: source-han-serif-korean,serif;
   font-weight: 700;
   font-style: normal;
@@ -73,7 +73,38 @@ nav {
   position: absolute;
   right: 0;
   top: 6px;
-  display: none;
+  opacity: 0%;
+}
+.search::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  
+}
+.search:hover::after {
+  width: 100%;
+  animation: 0.6s input-anim ease-out;
+}
+@keyframes input-anim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.search:hover .search-btn {
+  animation: 1s searchBtn-anim forwards;
+}
+@keyframes searchBtn-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 nav ul {
@@ -88,7 +119,7 @@ nav ul li {
   float: left;
   margin-left: 50px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 nav ul li:first-child{
   margin: 0;
@@ -115,7 +146,7 @@ nav ul li a {
 .button {
   z-index: 99;
   position: fixed;
-  top: 53px;
+  top: 52px;
   right: 100px;
   width: 35px;
   cursor: pointer;
@@ -204,6 +235,12 @@ nav ul li a {
   bottom: 0;
   right: 0;
   z-index: 1;
+  animation: 1.5s sub_bg_anim ease-out;
+}
+@keyframes sub_bg_anim {
+  0% {
+    transform: translate(50%);
+  }
 }
 
 .copy {
@@ -234,20 +271,45 @@ nav ul li a {
   top: 20%;
   left: 47%;
   transform: translateX(-50%);
-  background-image: url(./images/product_1.png);
+  background-image: url(./images/product_1_2.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 396px;
   height: 600px;
   z-index: 99;
-  animation: 1.5s product-anim ease-out;
+  animation: 1.3s product-anim ease-out;
 }
 @keyframes product-anim {
   0% {
     opacity: 0;
+    transform: translate(10%);
   }
   20% {
     opacity: 0;
+  }
+}
+.pieces{
+  width: 98px;
+  height: 86px;
+  background-image: url(./images/product_1_1.png);
+  z-index: 99;
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  animation: .8s pieces-anim ease-out forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+@keyframes pieces-anim {
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+    transform: scale(1.2) translate(-20%, -30%);
   }
 }
 
@@ -347,7 +409,9 @@ article button {
 article button:hover {
   border: none;
   background-color: #392019;
-  transition: 0.8s;
+  border: 2px solid #fff;
+  transition: 0.6s;
+  transform: scale(1.1);
 }
 
 
@@ -389,16 +453,30 @@ article .title_txt {
   }
 }
 
+.name::after {
+  content: '';
+  display: block;
+  width: 0;
+  margin-top: 4px;
+  height: 3px;
+  background: #fff;
+  transition: width 1s;
+}
+.title_txt:hover .name::after {
+  width: 95%;
+}
 
 .name {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
+
 .txt {
   font-size: 16px;
   margin: 0;
+  line-height: 28px;
 }
 
 .util {
@@ -408,6 +486,19 @@ article .title_txt {
   right: 100px;
   display: flex;
   align-items: center;
+  animation: 1.5s util_anim ease-out;
+}
+@keyframes util_anim {
+  0% {
+    opacity: 0;
+    transform: translate(100%);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 .circle {
