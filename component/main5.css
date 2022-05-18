@@ -1,0 +1,65 @@
+.main {
+  background: linear-gradient(45deg, #F1C6A9, #91562F);
+}
+
+.main_bg {
+  background-image: url(../images/main_bg_5.png);
+}
+.sub_bg {
+  background-image: url(../images/main_sub_5.png);
+}
+.product {
+  background-image: url(../images/product_3_1.png);
+}
+.pieces{
+  top: 3%;
+  left: 6%;
+  background-image: url(../images/product_3_2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title_1 {
+  top: 57%;
+  left: 16%;
+}
+
+.title_2 {
+  top: 57%;
+  left: 60%;
+}
+
+.plus_txt {
+  opacity: 0;
+  top: 20%;
+  left: 60%;
+  transform: translate(-50%);
+  animation: 1.5s plus-anim ease-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes plus-anim {
+  0% {
+    opacity: 0;
+    transform: translate(40%, 0%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.txt_shadow {
+  text-shadow: 0 1px 2px rgb(0, 0, 0, .3);
+}
+
+article button:hover {
+  color: #fff;
+  background-color: #DD8748;
+}

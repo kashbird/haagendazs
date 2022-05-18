@@ -1,0 +1,38 @@
+.main {
+  background: linear-gradient(45deg, #CE8557, #A95F30);
+}
+
+.main_bg {
+  background-image: url(../images/main_bg_3.png);
+}
+.sub_bg {
+  background-image: url(../images/main_sub_3.png);
+}
+.product {
+  background-image: url(../images/product_3_1.png);
+}
+.pieces{
+  top: 3%;
+  left: 6%;
+  background-image: url(../images/product_3_2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title_1 {
+  left: 16%;
+}
+
+.title_2 {
+  left: 48%;
+}
+
+.txt_shadow {
+  text-shadow: 0 1px 2px rgb(0, 0, 0, .3);
+}
+
+article button:hover {
+  color: #fff;
+  background-color: #DD8748;
+}

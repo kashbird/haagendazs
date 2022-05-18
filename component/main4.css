@@ -1,0 +1,81 @@
+.main {
+  background: #F5F5F5;
+}
+
+.main_bg {
+  background-image: url(../images/main_bg_4.png);
+}
+.sub_bg {
+  background-image: url(../images/main_sub_4.png);
+}
+.product {
+  background-image: url(../images/product_4_1.png);
+}
+.pieces{
+  top: 6%;
+  left: 8%;
+  background-image: url(../images/product_4_2.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#color {
+  color:#1870B0;
+}
+
+.button > span {
+  background-color: #1870B0;
+}
+
+.title_1 {
+  top: 57%;
+  left: 11%;
+}
+
+.title_2 {
+  top: 57%;
+  left: 55%;
+}
+
+.plus_txt {
+  opacity: 0;
+  top: 20%;
+  left: 57%;
+  transform: translate(-50%);
+  animation: 1.5s plus-anim ease-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes plus-anim {
+  0% {
+    opacity: 0;
+    transform: translate(40%, 0%);
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.name::after {
+  background: #1870B0;
+}
+
+.txt_shadow {
+  text-shadow: 0 1px 1px rgb(0, 0, 0, .3);
+}
+
+.btn_anim > button {
+  border: 2px solid #1870B0;
+  color:#1870B0;
+}
+
+article button:hover {
+  color: #fff;
+  background-color: #1870B0;
+}

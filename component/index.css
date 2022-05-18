@@ -40,7 +40,7 @@ nav {
   height: 75px;
   margin: 0;
   margin-right: 100px;
-  background-image: url(./images/logo.png);
+  background-image: url(../images/logo.png);
   background-size: cover;
   background-position: center;
 }
@@ -56,16 +56,19 @@ nav {
   border: none;
   color: white;
   font-size: 14px;
-  font-family: source-han-serif-korean,serif;
   font-weight: 700;
   font-style: normal;
+  outline: none;
+}
+.search input::placeholder {
+  color: white;
 }
 
 .search .search-btn {
   cursor: pointer;
   width: 24px;
   height: 24px;
-  background-image: url(./images/search.png);
+  background-image: url(../images/search.png);
   background-color: transparent;
   border: none;
   background-size: cover;
@@ -187,7 +190,7 @@ nav ul li a {
 .pattern {
   width: 100vw;
   height: 160px;
-  background-image: url(./images/main_pt.png);
+  background-image: url(../images/main_pt.png);
   background-repeat: no-repeat;
   opacity: 0%;
   position: absolute;
@@ -210,7 +213,7 @@ nav ul li a {
 .main_bg {
   width: 1300px;
   height: 800vh;
-  background-image: url(./images/main_bg_1.png);
+  background-image: url(../images/main_bg_1.png);
   background-repeat: no-repeat;
   background-size: 1240px 100vh;
   position: absolute;
@@ -228,7 +231,7 @@ nav ul li a {
 .sub_bg {
   width: 408px;
   height: 287px;
-  background-image: url(./images/main_sub_1.png);
+  background-image: url(../images/main_sub_1.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -252,8 +255,20 @@ nav ul li a {
   font-family: source-han-serif-korean,serif;
   font-weight: 400;
   font-style: normal;
-  opacity: 50%;
+  opacity: 0;
   text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+  animation: 1s copy-anim ease-out forwards;
+  animation-delay: .5s;
+}
+@keyframes copy-anim {
+  0%{
+    opacity: 0;
+    transform: translate(0, 100%) rotate(90deg);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {opacity: 50%;}
 }
 
 .number {
@@ -271,7 +286,7 @@ nav ul li a {
   top: 20%;
   left: 47%;
   transform: translateX(-50%);
-  background-image: url(./images/product_1_2.png);
+  background-image: url(../images/product_1_1.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 396px;
@@ -291,7 +306,7 @@ nav ul li a {
 .pieces{
   width: 98px;
   height: 86px;
-  background-image: url(./images/product_1_1.png);
+  background-image: url(../images/product_1_2.png);
   z-index: 99;
   position: absolute;
   top: 5%;
@@ -370,6 +385,13 @@ nav ul li a {
   }
 }
 
+.plus_txt {
+  position: absolute;
+  font-family: 'Water Brush', cursive;
+  text-shadow: 0 3px 10px rgb(0, 0, 0, .7);
+  font-size: 200px;
+}
+
 .btn_anim {
   animation: 1.3s btn-anim ease-out forwards;
   animation-delay: 1.5s;
@@ -409,7 +431,6 @@ article button {
 article button:hover {
   border: none;
   background-color: #392019;
-  border: 2px solid #fff;
   transition: 0.6s;
   transform: scale(1.1);
 }
@@ -547,11 +568,11 @@ article .title_txt {
 }
 
 .left {
-  background-image: url(./images/left.png);
+  background-image: url(../images/left.png);
   opacity: 70%;
 }
 
 .right {
-  background-image: url(./images/right.png);
+  background-image: url(../images/right.png);
   opacity: 70%;
 }
