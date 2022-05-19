@@ -137,6 +137,7 @@ nav ul li:first-child{
   background: #fff;
   transition: width .3s;
 }
+
 .border_line:hover::after {
   width: 100%;
 }
