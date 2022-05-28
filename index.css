@@ -84,7 +84,6 @@ nav {
   width: 0;
   height: 3px;
   background: #fff;
-  
 }
 .search:hover::after {
   width: 100%;
@@ -137,6 +136,7 @@ nav ul li:first-child{
   background: #fff;
   transition: width .3s;
 }
+
 .border_line:hover::after {
   width: 100%;
 }

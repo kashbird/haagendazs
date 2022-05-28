@@ -2,6 +2,10 @@
   background: #F5F5F5;
 }
 
+.border_line:not(:first-child)::after {
+  background: #1870B0;
+}
+
 .main_bg {
   background-image: url(../images/main_bg_4.png);
 }
@@ -78,4 +82,8 @@
 article button:hover {
   color: #fff;
   background-color: #1870B0;
+}
+
+.title_txt:hover .name::after {
+  width: 93%;
 }

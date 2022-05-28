@@ -36,3 +36,7 @@ article button:hover {
   color: #fff;
   background-color: #DD8748;
 }
+
+.title_txt:hover .name::after {
+  width: 71%;
+}
